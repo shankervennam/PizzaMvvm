@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="resultDisplay"
+            type="com.example.ivc17088adm.pizzamvvm.viewmodel.DetailsItemViewModel"/>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/items_details_layout"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detail_pizza_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{resultDisplay.title}"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/details_ph_no"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_local_phone_black_24dp"
+            android:tint="@color/colorPrimary"
+            android:onClick="@{resultDisplay::onPhoneClick}"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:id="@+id/details_location"
+            android:layout_width="44dp"
+            android:layout_height="41dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="@{resultDisplay::onLocationClick}"
+            android:src="@drawable/ic_local_pizza_black_24dp"
+            android:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/details_pizza_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/details_location"
+            android:textColor="@color/red"
+            android:textSize="24dp"
+            android:layout_marginTop="122dp"
+            android:text="@{resultDisplay.city}"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/details_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/details_pizza_address"
+            android:layout_marginTop="150dp"
+            android:text="@{resultDisplay.date}"
+            android:textSize="16dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/green"
+            android:layout_below="@+id/details_review"
+            android:text="@string/reviews"/>
+
+        <TextView
+            android:id="@+id/details_review_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/review"
+            android:text="@{resultDisplay.review}"
+            android:textSize="12dp"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+</layout>

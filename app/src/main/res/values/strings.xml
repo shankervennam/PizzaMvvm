@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PizzaMe</string>
+    <string name="pizza_name">Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="PhNo">PhNo</string>
+    <string name="distance">Distance</string>
+    <string name="reviews">Reviews</string>
+</resources>
